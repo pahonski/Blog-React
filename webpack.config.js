@@ -29,9 +29,15 @@ module.exports = {
                 }
             },
             {
+                test: /\.less$/,
+                loader: 'style-loader!css-loader!less-loader'
+            },
+
+            {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader'
             },
+
             {
                 test: /\.(woff|woff2)$/,
                 loader: "url-loader?limit=10000&mimetype=application/font-woff&name=./fonts/[name].[ext]"
@@ -51,7 +57,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx', '.sass', '.css']
+        extensions: ['', '.js', '.jsx', '.sass', '.css', '.less']
     },
     plugins: [
         new webpack.NoErrorsPlugin(),
