@@ -1,28 +1,28 @@
 let config = {
     menu: [
         {
-            liClass: "nav-item active",
+            liClass: "nav-item",
             aClass: "nav-link",
-            link: "#",
+            link: "/",
             name: "Главная"
         },
         {
-            liClass: "nav-item active",
+            liClass: "nav-item",
             aClass: "nav-link",
-            link: "#",
+            link: "/About",
             name: "О нас"
         },
         {
-            liClass: "nav-item active",
+            liClass: "nav-item",
             aClass: "nav-link",
-            link: "#",
+            link: "/Services",
             name: "Сервисы"
         },
         {
-            liClass: "nav-item active",
+            liClass: "nav-item",
             aClass: "nav-link",
-            link: "#",
-            name: "Контакты"
+            link: "/Users",
+            name: "Пользователи"
         }
     ]
 

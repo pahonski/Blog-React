@@ -1,12 +1,11 @@
 import React from 'react';
-import MainContent from "../components/MainContent";
 
-class Main extends React.Component
+export default class About extends React.Component
 {
     render() {
         return <div className="container">
             <div className="main-content">
-                <MainContent/>
+                Ошибка 404!
             </div>
 
         </div>
@@ -14,5 +13,3 @@ class Main extends React.Component
 
     }
 }
-
-export default Main;

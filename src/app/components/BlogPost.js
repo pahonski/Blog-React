@@ -3,7 +3,7 @@ import React from 'react';
 class BlogPost extends React.Component
 {
     render() {
-        return <div className="row" key={this.props.key}>
+        return <div className="row">
             <article className="blogpost">
                 <header>
                     <h1>{this.props.name}</h1>

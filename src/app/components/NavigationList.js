@@ -1,24 +1,32 @@
 import React from 'react';
 import config from '../config/NavigationConfig';
+import { Link } from 'react-router';
 
 class NavigationList extends React.Component
 {
+
+    isActive(href) {
+        if (window.location.pathname === href)
+            return window.location.pathname;
+    }
+
     render() {
 
+
+
         let items = config.menu.map((item, index) => {
-            return <li className={item.liClass} key={index}>
-                        <a className={item.aClass} href={item.link}>{item.name}
-                        </a>
+            return <li className={this.isActive(item.link)? 'active' : ''} key={index}>
+                        <Link className={item.aClass} to={item.link}>
+                            {item.name}
+                        </Link>
                     </li>
         });
 
-        console.log(items);
 
-        return <div className="collapse navbar-collapse" id="navbarResponsive">
-            <ul className="navbar-nav ml-auto">
+        return <ul className="nav navbar-nav navbar-left">
                 {items}
             </ul>
-        </div>
+
     }
 }
 

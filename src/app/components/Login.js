@@ -1,8 +1,10 @@
 import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { faCoffee, faSignInAlt } from '@fortawesome/fontawesome-free-solid'
+
+
 
 class Login extends React.Component
-
-
 {
     constructor() {
         super(...arguments);
@@ -13,6 +15,11 @@ class Login extends React.Component
     }
 
     render() {
+
+        const signIcon = (
+            <FontAwesomeIcon icon={faSignInAlt} />
+        );
+
         let that = this;
 
         function loginToggle() {
@@ -27,11 +34,18 @@ class Login extends React.Component
 
         }
 
-        return <div className="justify-content-between">
-            <a href="#" data-toggle="modal" data-target="#login-modal" className="btn btn-warning" onClick={() => {
-                loginToggle();
-            }}>Login</a>
-            </div>
+        return   <ul className="nav navbar-nav navbar-center">
+                <li><a className="nav-link" href="#"  onClick={() => {
+                    loginToggle();
+                }}>
+                    <span>{signIcon}</span> Sign Up
+                </a>
+                </li>
+            </ul>
+            // <a href="#" data-toggle="modal" data-target="#login-modal" className="btn btn-warning" onClick={() => {
+            //     loginToggle();
+            // }}>Login</a>
+            //
 
     }
 }

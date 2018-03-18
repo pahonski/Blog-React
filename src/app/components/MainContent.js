@@ -20,8 +20,7 @@ class MainContent extends React.Component
             />
         });
 
-        return <div className="main-content">
-            <div className="row">
+        return <div className="row">
                 <div className="col-lg-9">
                     {postList}
                 </div>
@@ -29,7 +28,7 @@ class MainContent extends React.Component
                     Sidebar
                 </div>
             </div>
-        </div>
+
     }
 }
 
